@@ -231,9 +231,23 @@ blockquote.custom-block .custom-block-title {
   border-radius: 6px;
 }
 
+/* --- Article card: hide auto-generated covers --- */
+.post-cover { display: none; }
+.post-wrap { display: flex; align-items: flex-start; gap: 0; }
+.post-info { flex: 1; padding: 16px 20px; }
+
+/* --- Gallery: clean waterfall --- */
+.gm-gallery { columns: 3 200px; column-gap: 10px; margin: 20px 0; }
+.gm-item { break-inside: avoid; margin-bottom: 10px; border-radius: 8px; overflow: hidden; background: #f5f5f5; display: inline-block; width: 100%; }
+.gm-item a { display: block; line-height: 0; }
+.gm-item img { display: block; width: 100%; height: auto; }
+.gm-item:hover { transform: scale(1.02); transition: transform .2s; }
+
+/* Hide photoWall gallery if it appears */
+.gallery-wall { display: none; }
+
 /* --- Article card spacing --- */
 .post-wrapper { margin-bottom: 8px; }
-.post-wrap { margin-bottom: 20px; }
 .post-article { margin-top: 6px; line-height: 1.7; }
 
 /* --- Tag cloud readability --- */
