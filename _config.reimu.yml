@@ -94,12 +94,9 @@ show_update_time: false
 summary:
   enable: false
 
-# i18n language switcher (all pages + posts supported)
+# i18n language switcher (disabled)
 i18n:
-  enable: true
-  type: [page, post]
-  generator: [archive, category, tag, index]
-  languages: [zh-CN, en]
+  enable: false
 
 # Inject custom CSS for Butterfly tag compatibility
 injector:
