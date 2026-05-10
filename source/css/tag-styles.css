@@ -1,0 +1,285 @@
+/* ===== Reimu Theme Custom Tags ===== */
+
+/* --- Badge (replaces label) --- */
+.rm-badge {
+  padding: 1px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: .82em;
+  margin: 0 1px;
+  display: inline-block;
+}
+.rm-badge.blue   { background: #5E72E4; }
+.rm-badge.red    { background: #f5365c; }
+.rm-badge.green  { background: #2dce89; }
+.rm-badge.purple { background: #8965e0; }
+.rm-badge.orange { background: #fb6340; }
+.rm-badge.pink   { background: #f78da7; }
+.rm-badge.gray   { background: #999; }
+
+/* --- Inline colored text (replaces span) --- */
+.c-red    { color: #f5365c; }
+.c-blue   { color: #5E72E4; }
+.c-green  { color: #2dce89; }
+.c-purple { color: #8965e0; }
+.c-orange { color: #fb6340; }
+.c-pink   { color: #f78da7; }
+.c-cyan   { color: #2bcbba; }
+.c-gray   { color: #999; }
+.c-black  { color: #333; }
+
+/* --- Video --- */
+div.video-c {
+  margin: 16px 0;
+  text-align: center;
+}
+div.video-c video, div.video-c iframe {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* --- Carousel (showcase) --- */
+.rc-carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 24px auto;
+  text-align: center;
+}
+.rc-main {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.rc-main-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fafafa;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.rc-main-img.active { opacity: 1; }
+.rc-prev, .rc-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -28px;
+  background: rgba(255,255,255,0.9);
+  color: #555;
+  border: 1px solid #e0e0e0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 13px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rc-prev:hover, .rc-next:hover { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.rc-prev { left: 10px; }
+.rc-next { right: 10px; }
+.rc-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.rc-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all .2s;
+  opacity: .55;
+  flex-shrink: 0;
+}
+.rc-thumb:hover { opacity: .85; }
+.rc-thumb.active {
+  opacity: 1;
+  border-color: #5E72E4;
+  box-shadow: 0 2px 6px rgba(94,114,228,0.3);
+}
+.rc-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.rc-title { margin-top: 8px; color: #888; font-size: .85em; }
+
+/* --- Poem --- */
+.rm-poem {
+  margin: 20px auto;
+  padding: 24px;
+  text-align: center;
+  max-width: 480px;
+  font-style: italic;
+  line-height: 2;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.rm-poem-title { font-weight: bold; font-style: normal; margin-bottom: 4px; font-size: 1.05em; }
+.rm-poem-author { color: #999; font-size: .85em; font-style: normal; margin-bottom: 12px; }
+.rm-poem-author::before { content: "—— "; }
+
+/* --- Timeline --- */
+.rm-timeline {
+  margin: 20px 0;
+  padding-left: 24px;
+  border-left: 3px solid #e8e8e8;
+}
+.rm-timeline.blue  { border-left-color: #5E72E4; }
+.rm-timeline.green { border-left-color: #2dce89; }
+.rm-timeline.red   { border-left-color: #f5365c; }
+.rm-tl-head {
+  margin-left: -38px;
+  margin-bottom: 16px;
+  padding: 4px 14px;
+  background: #5E72E4;
+  color: #fff;
+  border-radius: 16px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: .9em;
+}
+.rm-timeline.blue  .rm-tl-head { background: #5E72E4; }
+.rm-timeline.green .rm-tl-head { background: #2dce89; }
+.rm-timeline.red   .rm-tl-head { background: #f5365c; }
+.rm-tl-item {
+  position: relative;
+  margin-bottom: 14px;
+  padding-left: 12px;
+}
+.rm-tl-item::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  background: #ccc;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.rm-timeline.blue  .rm-tl-item::before { background: #5E72E4; }
+.rm-timeline.green .rm-tl-item::before { background: #2dce89; }
+.rm-timeline.red   .rm-tl-item::before { background: #f5365c; }
+
+/* --- Progress --- */
+.rm-progress {
+  margin: 8px 0;
+  height: 20px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.rm-progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: .78em;
+  line-height: 20px;
+  transition: width .8s ease;
+}
+.rm-progress-bar.bg-blue   { background: #5E72E4; }
+.rm-progress-bar.bg-green  { background: #2dce89; }
+.rm-progress-bar.bg-red    { background: #f5365c; }
+.rm-progress-bar.bg-purple { background: #8965e0; }
+.rm-progress-bar.bg-orange { background: #fb6340; }
+
+/* --- Buttons --- */
+.rm-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.rm-btn {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: .9em;
+  transition: all .2s;
+  border: 1px solid #e0e0e0;
+  color: #555;
+  background: #fff;
+}
+.rm-btn:hover { border-color: #5E72E4; color: #5E72E4; }
+.rm-btn.primary { background: #5E72E4; color: #fff; border-color: #5E72E4; }
+.rm-btn.primary:hover { background: #4a72d4; }
+
+/* --- Alert blockquote overrides (reimu built-in) --- */
+blockquote.custom-block {
+  border-radius: 6px;
+}
+blockquote.custom-block .custom-block-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+/* Rendered image sizing */
+.article-entry img:not(.rc-main-img):not(.rc-thumb img) {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* --- Gallery: waterfall/masonry, no crop --- */
+.gm-gallery {
+  columns: 4 200px;
+  column-gap: 10px;
+  margin: 20px 0;
+}
+.gm-item {
+  break-inside: avoid;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform .2s;
+  background: #f5f5f5;
+  display: inline-block;
+  width: 100%;
+}
+.gm-item:hover {
+  transform: scale(1.02);
+}
+.gm-item a {
+  display: block;
+  line-height: 0;
+}
+.gm-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .3s;
+}
+.gm-item:hover img {
+  transform: scale(1.05);
+}
+/* Fallback for old gallery classes */
+.gallery-wall .photo-item {
+  max-height: 360px !important;
+  overflow: hidden;
+}
+.gallery-wall .photo-item img {
+  object-fit: cover;
+  object-position: top;
+}
+
+/* --- code blocks in details --- */
+details.custom-block .detail-content pre {
+  margin-top: 8px;
+}
+
+/* --- fix reimu details in dark mode --- */
+[data-theme="dark"] details.custom-block {
+  background: #2a2a2a;
+  border-color: #444;
+}

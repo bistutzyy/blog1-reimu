@@ -1,0 +1,135 @@
+# reimu theme configuration
+theme_version_check: false
+
+# Navigation menu
+menu:
+  - name: home
+    url: /
+    icon:
+  - name: archives
+    url: /archives
+    icon:
+  - name: about
+    url: /about
+    icon:
+  - name: friend
+    url: /friend
+    icon:
+
+# Typewriter subtitle
+subtitle:
+  typing:
+    enable: true
+    strings:
+      - 学无止境，持之以恒
+      - 千里之行，始于足下
+      - 记录学习，分享成长
+    typeSpeed: 100
+    backSpeed: 50
+    backDelay: 2000
+    startDelay: 300
+    loop: true
+    shuffle: true
+    showCursor: true
+    cursorChar: "|"
+
+# Favicon
+favicon: "/images/favicon.ico"
+
+# Avatar (from source/_data/avatar/)
+avatar: "avatar.png"
+
+# Post cover (default to theme banner)
+cover:
+banner: "/images/banner.webp"
+
+# Table of contents
+toc: true
+toc_options:
+  list_number: true
+  min_depth: 1
+  max_depth: 6
+
+# RSS (disabled, no feed generator installed)
+rss:
+
+# Footer
+footer:
+  since: 2024
+  powered: true
+  count: true
+  busuanzi: true
+  icon:
+    url: "../images/taichi.png"
+    rotate: true
+    mask: true
+
+# Sidebar
+sidebar:
+  position: right
+  menu: true
+  article:
+    show_common: true
+
+# Social links
+social:
+  github: https://github.com/bistutzyy
+  bilibili: https://space.bilibili.com/1061280173?spm_id_from=333.1007.0.0
+  email: mailto:173236231@qq.com
+
+# Widgets
+widgets:
+  - tagcloud
+
+# Archive
+archive_type: "monthly"
+show_count: true
+recent_posts_limits: 5
+tagcloud_limits: 30
+
+# Show update time
+show_update_time: false
+
+# Summary
+summary:
+  enable: false
+
+# i18n language switcher (all pages + posts supported)
+i18n:
+  enable: true
+  type: [page, post]
+  generator: [archive, category, tag, index]
+  languages: [zh-CN, en]
+
+# Inject custom CSS for Butterfly tag compatibility
+injector:
+  head_begin:
+    - <link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css">
+    - <link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@6/css/all.min.css">
+    - <link rel="stylesheet" href="/css/tag-styles.css">
+
+# Butterfly tag compatibility (for note, label, etc.)
+note:
+  style: flat
+  icons: true
+  border_radius: 3
+  light_bg_offset: 0
+
+label:
+  enable: true
+
+series:
+  enable: false
+  orderBy: 'title'
+  order: 1
+  number: true
+
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+# Music player - disabled
+player:
+  aplayer:
+    enable: false
+  meting:
+    enable: false
