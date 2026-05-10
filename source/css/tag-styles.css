@@ -231,6 +231,28 @@ blockquote.custom-block .custom-block-title {
   border-radius: 6px;
 }
 
+/* --- Article card spacing --- */
+.post-wrapper { margin-bottom: 8px; }
+.post-wrap { margin-bottom: 20px; }
+.post-article { margin-top: 6px; line-height: 1.7; }
+
+/* --- Tag cloud readability --- */
+.tagcloud a {
+  font-size: inherit !important;
+  padding: 3px 8px;
+  margin: 2px;
+  display: inline-block;
+  border-radius: 4px;
+  background: rgba(94,114,228,0.08);
+  color: #555;
+  transition: all .2s;
+}
+.tagcloud a:hover { background: rgba(94,114,228,0.18); color: #5E72E4; }
+
+/* --- Sidebar author fix --- */
+.sidebar-author { text-align: center; }
+.sidebar-author-name { margin-top: 8px; }
+
 /* --- Gallery: waterfall/masonry, no crop --- */
 .gm-gallery {
   columns: 4 200px;
